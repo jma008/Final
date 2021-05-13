@@ -153,7 +153,7 @@ def main(sc):
                  'supermarkets_except_convenience_stores']
 
     for i, name in enumerate(filenames):
-        rddJ.filter(lambda x: x[0] == i or x[0] == -(i + 1)).values() \
+        rddJ.filter(lambda x: x[0] == i or x[0] == -1).values() \
             .saveAsTextFile(f'{OUTPUT_PREFIX}/{name}')
 
 
